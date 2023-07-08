@@ -4,7 +4,7 @@ import React from 'react'
 import GoogleIcon from "../../../../public/image/Google.png"
 import AppleIcon from "../../../../public/image/Applee.png"
 import HeroImage from "../../../../public/image/HeroImage.png"
-// import { BiSolidStar, BiSolidStarHalf } from "react-icons/bi"
+import { BiSolidStar, BiSolidStarHalf } from "react-icons/bi"
 
 export const HeroPage = () => {
     return (
@@ -13,12 +13,12 @@ export const HeroPage = () => {
         <div className='relative overflow-hidden '>
             <div>
                 <div className="gap-y-10 my-[7rem]">
-                    <ApText className='text-slate-200 mt-4'>REDUCE YOUR STRESS</ApText>
+                    <ApText size='sm' color='muted' className='text-slate-300 mt-4'>REDUCE YOUR STRESS</ApText>
                     <div className='mt-4'>
-                        <ApText className='text-white font-bold text-[40px] leading-[60px] '>
+                        <h4 className='text-white font-bold text-[41px] leading-[60px] '>
                             Discover the Ultimate <br />
                             Student Accommodation <br />
-                            Experience</ApText>
+                            Experience</h4>
                     </div>
 
 
@@ -34,7 +34,7 @@ export const HeroPage = () => {
                                     src={GoogleIcon}
                                     width={30}
                                     height={30}
-                                    alt=""
+                                    alt="image"
                                     className="w-full h-full object-cover"
                                 />
 
@@ -54,23 +54,33 @@ export const HeroPage = () => {
 
                         <div className='flex gap-x-[55px] mt-2 '>
                             <div className='flex gap-x-2 items-center'>
-                                <ApText size='lg' className="text-white font-bold text-[25px]">4.5</ApText>
+                                <h4 className="text-white font-bold text-[27px]">4.5</h4>
                                 <div>
-                                    <ApText className="">
-                                        {/* <BiSolidStar size={20} color="yellow" /> */}
-                                        {/* <BiSolidStarHalf size={20} color="yellow" />  */}
-                                        <ApText className="text-sm">111111</ApText>
+                                    <ApText className="flex gap-x-1">
+                                        <BiSolidStar size={15} color="#FFBB0D" />
+                                        <BiSolidStar size={15} color="#FFBB0D" />
+                                        <BiSolidStar size={15} color="#FFBB0D" />
+                                        <BiSolidStar size={15} color="#FFBB0D" />
+                                        <BiSolidStar size={15} color="#FFBB0D" />
+                                       
+                                      
 
                                     </ApText>
-                                    <ApText className="mt-[-8px] text-white text-sm">+2 Reviews</ApText>
+                                    <ApText className="mt-[-4px] text-white text-sm">+2 Reviews</ApText>
                                 </div>
                             </div>
 
                             <div className='flex gap-x-2 items-center'>
-                                <ApText size='lg' className="text-white font-bold text-[25px]">3.5</ApText>
+                                <h4 className="text-white font-bold text-[27px]">3.5</h4>
                                 <div>
-                                    <ApText className="text-sm">111111</ApText>
-                                    <ApText className=" mt-[-8px] text-white text-sm">+2 Reviews</ApText>
+                                <ApText className="flex gap-x-1">
+                                        <BiSolidStar size={15} color="#FFBB0D" />
+                                        <BiSolidStar size={15} color="#FFBB0D" />
+                                        <BiSolidStar size={15} color="#FFBB0D" />
+                                        <BiSolidStar size={15} color="#FFBB0D" />
+                                        <BiSolidStar size={15} color="#FFBB0D" />
+                                    </ApText>
+                                    <ApText className=" mt-[-4px] text-white text-sm">+2 Reviews</ApText>
                                 </div>
                             </div>
 
