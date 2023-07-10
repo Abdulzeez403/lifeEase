@@ -12,7 +12,7 @@ const Testimonial = () => {
         <div className="my-10" >
         <h4 className='font-bold text-[2.2rem] text-center text-black my-[4rem]'>Testimonial</h4>
 
-        <div className="flex gap-x-5">
+        <div className=" sm:block md:flex md:gap-x-5 lg:flex lg:gap-x-5">
 
         {/* <div className="my-10" >
             <ApText className='font-bold text-[2rem] text-center text-black my-[4rem]'>Testimonial</ApText>

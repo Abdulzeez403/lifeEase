@@ -8,7 +8,7 @@ import { AiFillStar } from 'react-icons/ai'
 
 const HostelsComponents = () => {
     return (
-        <div>
+        <div >
             <div className="my-10">
                 <h4 className='font-bold text-[2.2rem] text-center text-black my-[4rem] md:text-[2.5rem] lg:text-[2.5rem]'>Discover the most Popular Hostels</h4>
                 <div className="hidden md:block lg:block">
@@ -20,13 +20,26 @@ const HostelsComponents = () => {
 
                 </div>
             </div>
-            <div className='flex overflow-scroll w-[100%] md:grid md:grid-cols-3 md:gap-5 lg:grid lg:grid-cols-3 lg:gap-5 '>
+            <div className='flex overflow-scroll 
+            md:grid md:grid-cols-3 md:gap-5 md:overflow-auto 
+            lg:grid lg:grid-cols-3 lg:overflow-auto lg:gap-5 '>
+
+                <div>
                 <HostelItem />
+                </div>
+                <div>
                 <HostelItem />
+                </div>
+                <div>
                 <HostelItem />
+                </div>
+                <div>
                 <HostelItem />
+                </div>
+                <div>
                 <HostelItem />
-                <HostelItem />
+                </div>
+             
             </div>
 
         </div>
@@ -37,7 +50,9 @@ export default HostelsComponents
 
 const HostelItem = () => {
     return (
-            <div className=" w-[20rem] border-2 shadow-lg rounded-lg my-4">
+            <div className="w-80 border-2 shadow-lg rounded-lg
+            sm:w-[30rem] md:w-[100%] 
+            lg:w-[100%]  my-4">
                 <div className='relative' >
                     <ApImage
                         src={hostelImage}

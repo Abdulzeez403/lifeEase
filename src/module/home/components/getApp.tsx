@@ -9,16 +9,22 @@ const GetAppComponent = () => {
     return (
         <div className="gap-y-10 p-4 py-6">
             <div className='mt-4'>
-                <h4 className='text-white font-semi-bold text-[45px] leading-[60px] w-[420px] '>
+                <h4 className=' text-center text-[30px] w-[100%] text-white font-semi-bold leading-[60px] 
+                md:text-[45px] md:text-left md:w-[420px] 
+                lg:text-[45px] lg:text-left lg::w-[420px]'>
                     Let’s find you the perfect home away from home.</h4>
             </div>
 
 
-            <ApText className='w-[40%] text-white text-bold text-sm leading-5 mt-4 '>
+            <ApText className='w-[100%] text-center text-white text-bold text-sm leading-5 mt-4
+            md:w-[40%] md:text-left lg:w-[40%] lg:text-left '>
                 Choose us for our vast database of hostels, offering you a wide range of options to cater to your preferences and budget.
             </ApText>
 
-            <div className=" ">
+            <div className=" w-80 mx-auto 
+            sm:w-80 sm:mx-auto 
+            md:w-80 md:mx-0 
+            lg:w-80 lg:mx-0">
                 <div className='flex gap-x-8 mt-6'>
                     <div className="w-[150px]">
                         <ApImage

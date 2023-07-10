@@ -3,7 +3,7 @@ import React from 'react'
 
 const ChooseComponent = () => {
     return (
-        <div className="my-[5rem] w-[90%] mx-auto">
+        <div className="my-[5rem] ">
             <h4 className='font-bold text-[2.2rem] text-center text-black my-[4rem] md:text-[2.5rem] lg:text-[2.5rem]'>Why Choose Us?</h4>
             <div className="block   md:flex md:justify-between lg:flex lg:justify-between ">
                 <ChooseItems

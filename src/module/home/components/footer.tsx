@@ -12,9 +12,12 @@ export const FooterComponent = () => {
 
         <div>
 
-            <div className='flex justify-between px-4 py-8' >
+            <div className='sm:block
+             md:flex md:justify-between md:px-4 md:py-8
+             lg:flex lg:justify-between lg:px-4 lg:py-8' >
                 <div>
-                    <div className='w-[100px] mb-10'>
+                    <div className='w-[100px] mx-auto py-6
+                    md:mx-0 lg:mx-0'>
                         <ApImage
                             src={LogoWhite}
                             width={30}
@@ -24,7 +27,8 @@ export const FooterComponent = () => {
                         />
                     </div>
 
-                    <ApText size={'sm'} className='w-[20rem] text-white'>
+                    <ApText size={'sm'} className=' text-center w-[80%] mx-auto text-white md:text-left md:w-[20rem] md:mx-0
+                     lg:text-left lg:w-[20rem] lg:mx-0'>
                         Find, Join, Save, Manage, Share, Stay Updated. Sign up now to discover your ideal student accommodation, unlock exclusive features, effortlessly save and compare favorite hostels,
                     </ApText>
 
@@ -36,8 +40,8 @@ export const FooterComponent = () => {
                 </div>
 
                 <div>
-                    <ApText className="text-white font-bold text-md mb-10">Helpfull Links</ApText>
-                    <div className='flex-1'>
+                    <ApText className="text-center text-white font-bold text-md my-8 md:text-left lg:text-left">Helpfull Links</ApText>
+                    <div className='flex-1 text-center md:text-left lg:text-left'>
                         <li>
                             <Link href="/" className='text-white'>Home</Link>
 
@@ -55,24 +59,27 @@ export const FooterComponent = () => {
 
                 </div>
                 <div>
-                    <ApText className="text-white font-bold text-md mb-10">Support</ApText>
-                    <li>
-                        <Link href="/" className='text-white'>Term and Condition</Link>
+                    <ApText className="text-center text-white font-bold text-md my-8 md:text-left lg:text-left">Support</ApText>
 
-                    </li>
-                    <li>
-                        <Link href="/" className='text-white'>Support center</Link>
+                    <div className='flex-1 text-center md:text-left lg:text-left'>
+                        <li>
+                            <Link href="/" className='text-white'>Term and Condition</Link>
 
-                    </li>
-                    <li>
-                        <Link href="/" className='text-white'>privacy policy</Link>
+                        </li>
+                        <li>
+                            <Link href="/" className='text-white'>Support center</Link>
 
-                    </li>
+                        </li>
+                        <li>
+                            <Link href="/" className='text-white'>privacy policy</Link>
 
+                        </li>
+                    </div>
                 </div>
                 <div>
-                    <ApText className="text-white font-bold text-md  mb-10">Contact</ApText>
-                    <ApText className="w-50 text-white" size={"sm"}>
+                    <ApText className="text-center text-white font-bold text-md  my-8 md:text-left lg:text-left">Contact</ApText>
+                    <ApText className=" text-center w-[80%] mx-auto text-white md:text-left md:w-[20rem] md:mx-0
+                     lg:text-left lg:w-[20rem] lg:mx-0" size={"sm"}>
                         Address: 123 Main Street, Anytown, USA <br />
                         Email: john.doe@example.com  <br />
                         Phone Number: +1 (555) 123-4567  <br />
