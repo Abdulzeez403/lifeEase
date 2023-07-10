@@ -10,8 +10,8 @@ const HostelsComponents = () => {
     return (
         <div>
             <div className="my-10">
-                <h4 className='font-bold text-[2.5rem] text-center text-black my-[4rem]'>Discover the most Popular Hostels</h4>
-                <div>
+                <h4 className='font-bold text-[2.2rem] text-center text-black my-[4rem] md:text-[2.5rem] lg:text-[2.5rem]'>Discover the most Popular Hostels</h4>
+                <div className="hidden md:block lg:block">
                     <div className='flex gap-x-5 justify-center items-center'>
                         <ApSearchInput className="shadow-md w-[20rem]  py-2 outline-none  placeholder:px-2 focus:px-2" placeholder="Search....." onSearchChange={() => console.log("Yea!")} />
                         <ApButton title="See more" color="primary" btnSize="md" rounded="rounded-md" />
@@ -20,7 +20,7 @@ const HostelsComponents = () => {
 
                 </div>
             </div>
-            <div className='grid grid-cols-3 gap-5 '>
+            <div className='flex overflow-scroll w-[100%] md:grid md:grid-cols-3 md:gap-5 lg:grid lg:grid-cols-3 lg:gap-5 '>
                 <HostelItem />
                 <HostelItem />
                 <HostelItem />
@@ -37,8 +37,7 @@ export default HostelsComponents
 
 const HostelItem = () => {
     return (
-        <>
-            <div className=" border-2 shadow-lg rounded-lg my-4">
+            <div className=" w-[20rem] border-2 shadow-lg rounded-lg my-4">
                 <div className='relative' >
                     <ApImage
                         src={hostelImage}
@@ -75,6 +74,5 @@ const HostelItem = () => {
 
 
             </div>
-        </>
     )
 }

@@ -12,7 +12,7 @@ export const HomePage = () => {
     return (
         <div>
 
-            <div className='bg-[#056DFF]  p-6 pb-0'>
+            <div className='bg-[#056DFF] p-6  md:p-6 md:pb-0  lg:p-6 lg:pb-0'>
                 <Navbar />
                 <HeroPage />
             </div>
