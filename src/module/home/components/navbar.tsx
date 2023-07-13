@@ -29,7 +29,10 @@ export const Navbar = () => {
             </div>
             <div className="hidden md:flex md:gap-x-8  lg:flex lg:gap-x-8">
                 <ApButton title="Login" className="text-bold font-medium text-white " />
+                <Link href="/signUp">
                 <ApButton title="Sign Up" className=" text-bold font-medium bg-white rounded-lg px-5 py-1" />
+                </Link>
+               
 
             </div>
         </div>
