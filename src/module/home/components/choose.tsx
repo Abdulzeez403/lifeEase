@@ -5,7 +5,7 @@ const ChooseComponent = () => {
     return (
         <div className="my-[5rem] ">
             <h4 className='font-bold text-[2.2rem] text-center text-black my-[4rem] md:text-[2.5rem] lg:text-[2.5rem]'>Why Choose Us?</h4>
-            <div className="block   md:flex md:justify-between lg:flex lg:justify-between ">
+            <div className="block  md:flex md:w-[80%] md:mx-auto lg:flex lg:w-[80%] lg:mx-auto ">
                 <ChooseItems
                     title='01.'
                     subtitle='Seamless Booking Experience'
@@ -24,7 +24,7 @@ const ChooseComponent = () => {
                     title='03.'
                     subtitle='Extensive Selection'
                     description='Choose us for our vast database of hostels, offering you
-                     a wide range of options to cater to your preferences and budget.'
+                     a wide range of options to cater to your preferences and budget .'
                     className="text-green-600"
                     subStyle="md:w-[80px] lg:w-[80px] " />
             </div>
@@ -47,7 +47,7 @@ const ChooseItems: React.FC<IProps> = ({ title, subtitle, description, className
             <div className=" text-center md:text-left lg:text-left">
                 <h4 className={`font-bold text-[2.2rem]  ${className}`}>{title}</h4>
                 <ApText className={`font-bold my-5 md:w-[200px] lg:w-[200px]  ${subStyle}`} size={"lg"} >{subtitle}</ApText>
-                <ApText size={"xs"} className='my-5 w-[80%]  mx-auto leading-4  md:w-[80%] md:mx-0 lg:w-[80%] lg:mx-0 '>{description}</ApText>
+                <ApText size={"xs"} className='my-5 w-[80%]  mx-auto leading-4  md:w-[90%] md:mx-0 lg:w-[90%] lg:mx-0 '>{description}</ApText>
             </div>
         </div>
     )

@@ -5,7 +5,11 @@ import Link from 'next/link'
 import ApButton from '@/components/button'
 import { CiMenuFries } from 'react-icons/ci'
 
-export const Navbar = () => {
+interface IProps {
+    OpenModal: () => void;
+}
+
+export const Navbar: React.FC<IProps> = ({OpenModal}) => {
     return (
         <div className='flex  items-center justify-between '>
             <div className='w-[100px] '>
@@ -19,20 +23,20 @@ export const Navbar = () => {
             </div>
 
             <div className='flex md:hidden lg:hidden'>
-                <CiMenuFries size={25} color="white"/>
+                <CiMenuFries size={25} color="white" />
             </div>
             <div className="hidden md:flex md:gap-x-4 lg:flex lg:gap-x-4 ">
                 <Link href="" className='text-white'>Home</Link>
                 <Link href="" className='text-white'>Bookings</Link>
                 <Link href="" className='text-white'>Contact Us</Link>
-                <Link href="" className='text-white'>About</Link>
+                <Link href="/about" className='text-white'>About</Link>
             </div>
             <div className="hidden md:flex md:gap-x-8  lg:flex lg:gap-x-8">
-                <ApButton title="Login" className="text-bold font-medium text-white " />
+                <ApButton title="Login" className="text-bold font-medium text-white " onClick={OpenModal} />
                 <Link href="/signUp">
-                <ApButton title="Sign Up" className=" text-bold font-medium bg-white rounded-lg px-5 py-1" />
+                    <ApButton title="Sign Up" className=" text-bold font-medium bg-white rounded-lg px-5 py-1" />
                 </Link>
-               
+
 
             </div>
         </div>
