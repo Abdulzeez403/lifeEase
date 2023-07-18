@@ -91,11 +91,11 @@ const MobileNav = ({ OpenModal, toggleFunc, toggle }: IMobile) => {
 
                     </li>
 
-                    <ApButton title="Login" className="text-bold font-medium text-white bg-blue-200 px-10  py-1 my-4 border-2 border-black rounded-md " onClick={OpenModal} />
+                    <ApButton title="Login" className="text-bold font-medium text-white bg-[#056DFF]  px-10  py-2 my-4  rounded-md " onClick={OpenModal} />
                     <li>
                         <Link href="/signUp">
 
-                            <ApButton title="Sign Up" className=" text-bold font-medium bg-white border-2 border-blue-300 rounded-lg px-8 py-1" />
+                            <ApButton title="Sign Up" className=" text-bold font-medium bg-white border-2 border-[#056DFF] rounded-md px-8 py-1" />
                         </Link>
                     </li>
 

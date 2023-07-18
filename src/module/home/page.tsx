@@ -13,7 +13,7 @@ import SignIn from '../auth/signin'
 
 export const HomePage = () => {
     const [modal, setModal] = useState({ show: false });
-    const handleModal = () => setModal({ show: false });
+    const handleModal = () => setModal({ show: true });
 
 
     return (
