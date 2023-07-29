@@ -16,13 +16,15 @@ export const Navbar: React.FC<IProps> = ({ OpenModal }) => {
     return (
         <div className='flex  items-center justify-between '>
             <div className='w-[100px] '>
-                <ApImage
-                    src={Logo}
-                    width={30}
-                    height={30}
-                    alt=""
-                    className="w-full h-full object-cover"
-                />
+                <Link href="/">
+                    <ApImage
+                        src={Logo}
+                        width={30}
+                        height={30}
+                        alt=""
+                        className="w-full h-full object-cover"
+                    />
+                </Link>
             </div>
 
             <div className='flex md:hidden lg:hidden'>
@@ -40,8 +42,8 @@ export const Navbar: React.FC<IProps> = ({ OpenModal }) => {
 
             <div className="hidden md:flex md:gap-x-4 lg:flex lg:gap-x-4 ">
                 <Link href="" className='text-white'>Home</Link>
-                <Link href="" className='text-white'>Bookings</Link>
-                <Link href="" className='text-white'>Contact Us</Link>
+                <Link href="/booking" className='text-white'>Bookings</Link>
+                <Link href="/contact" className='text-white'>Contact Us</Link>
                 <Link href="/about" className='text-white'>About</Link>
             </div>
             <div className="hidden md:flex md:gap-x-8  lg:flex lg:gap-x-8">
@@ -63,27 +65,23 @@ interface IMobile {
 
 const MobileNav = ({ OpenModal, toggleFunc, toggle }: IMobile) => {
 
-    let styleLink = "text-bold font-semibold text-[1.2rem]";
 
     return (
         <ApDrawer open={toggle}
             onDismiss={toggleFunc}
         >
             <div className='bg-white w-96  px-0'>
-                {/* <div className="flex justify-end px-4">
-                    <AiOutlineClose size={25} onClick={toggleFunc} />
-                </div> */}
                 <div className="text-center">
                     <li>
                         <Link href="/" className="text-bold font-semibold text-[1.2rem]">Home</Link>
 
                     </li>
                     <li>
-                        <Link href="" className="text-bold font-semibold text-[1.2rem]" >Bookings</Link>
+                        <Link href="/booking" className="text-bold font-semibold text-[1.2rem]" >Bookings</Link>
 
                     </li>
                     <li>
-                        <Link href="" className="text-bold font-semibold text-[1.2rem]" >Contact Us</Link>
+                        <Link href="/contact" className="text-bold font-semibold text-[1.2rem]" >Contact Us</Link>
 
                     </li>
                     <li>
