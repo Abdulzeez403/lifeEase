@@ -1,9 +1,9 @@
 import { ApImage } from '@/components/image';
 import React from 'react'
-import Image1 from "../../../../public/image/Image1.png"
-import Image2 from "../../../../public/image/Image2.png"
-import Image3 from "../../../../public/image/Image3.png"
-import Image4 from "../../../../public/image/Image4.png"
+import Image1 from "../../../../public/image/image1.png"
+import Image2 from "../../../../public/image/image2.png"
+import Image3 from "../../../../public/image/image3.png"
+import Image4 from "../../../../public/image/image4.png"
 
 const RoomsImage = () => {
     return (
