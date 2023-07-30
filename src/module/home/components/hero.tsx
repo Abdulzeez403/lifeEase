@@ -9,8 +9,6 @@ import { BiSolidStar, BiSolidStarHalf } from "react-icons/bi"
 
 export const HeroPage = () => {
     return (
-
-
         <div className=' block md:relative md:overflow-hidden  lg:relative lg:overflow-hidden '>
             <div>
                 <div className="gap-y-10 my-[7rem]">
@@ -101,22 +99,16 @@ export const HeroPage = () => {
                 </div >
             </div>
 
-            <div className=" 
-            hidden
-          md:absolute md:top-[2.3rem] md:right-0 md:bottom-0 md:w-[650px] md:block
+
+            <div className=" hidden md:absolute md:top-[2.3rem] md:right-0 md:bottom-0 md:w-[650px] md:block
             lg:absolute lg:top-[2.3rem] lg:right-0 lg:bottom-0 lg:w-[650px] lg:block ">
                 <ApImage
                     src={HeroImage}
                     width={45}
                     height={40}
                     alt=""
-                // className="w-full h-full object-cover"
                 />
             </div>
         </div>
-
-
-
-
     )
 }
