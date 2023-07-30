@@ -3,17 +3,23 @@ import SignImage from "../../../public/image/signupImage.png"
 import Logo from "../../../public/image/Logo.png"
 import { ApImage } from '@/components/image'
 import { ApTextInput } from '@/components/input/TextInput'
-import { Formik, FormikProps } from 'formik'
+import { Form, Formik, FormikProps } from 'formik'
 import { ApText } from '@/components/typography'
 import ApButton from '@/components/button'
 import { FcGoogle } from "react-icons/fc"
 import { AiOutlineInstagram, AiFillLinkedin } from 'react-icons/ai'
 import { BsTwitter } from 'react-icons/bs'
 import Link from 'next/link'
+import { useUserContext } from './UserContext'
+import { IAuthSignUp } from './model'
 export const Signup = () => {
 
-    const handleSignin = () => {
-        console.log("SingUP")
+    const { loading, CreateUser } = useUserContext()
+
+    const handleSignUp = (values: IAuthSignUp) => {
+        const payload = { ...values }
+        CreateUser(payload)
+        console.log("SignUp")
     }
     return (
         <div className="flex h-[50%] overflow-hidden">
@@ -36,80 +42,79 @@ export const Signup = () => {
 
                     <Formik
                         //   validationSchema={FormSchema}
-                        initialValues={{}}
-                        onSubmit={handleSignin}
+                        initialValues={{ name: "", email: "", password: "" }}
+                        onSubmit={handleSignUp}
                     >
                         {(props: FormikProps<any>) => (
+                            <Form>
 
-                            <div>
+                                <div>
 
-                                <div className=''>
+                                    <div className=''>
 
-                                    <ApTextInput
-                                        type="text"
-                                        placeHolder="Name"
-                                        name="name"
-                                        className=' border-b-2 border-[#6F6E6E] 
+                                        <ApTextInput
+                                            type="text"
+                                            placeHolder="Name"
+                                            name="name"
+                                            className=' border-b-2 border-[#6F6E6E] 
                                         placeholder:text-[1rem] placeholder:text-[#6F6E6E]'
 
-                                    />
-                                </div>
+                                        />
+                                    </div>
 
-                                <div className='py-6'>
+                                    <div className='py-6'>
 
-                                    <ApTextInput
-                                        type="email"
-                                        placeHolder="Email"
-                                        name="email"
-                                        className=' border-b-2 border-[#6F6E6E] 
+                                        <ApTextInput
+                                            type="email"
+                                            placeHolder="Email"
+                                            name="email"
+                                            className=' border-b-2 border-[#6F6E6E] 
                                  placeholder:text-[1rem] placeholder:text-[#6F6E6E]'
 
-                                    />
-                                </div>
-
-
-                                <div className='pb-8'>
-                                    <ApTextInput
-                                        type="password"
-                                        placeHolder="Password"
-                                        name="password"
-                                        className=' border-b-2 border-[#6F6E6E] 
-                                     placeholder:text-[1rem] placeholder:text-[#6F6E6E]'
-                                    />
-                                </div>
-
-
-
-                                <ApButton
-                                    title="Create an account"
-                                    type="submit"
-                                    //   loading={loading}
-                                    //   onClick={() => props.handleSubmit()}
-                                    className="bg-[#056DFF] text-white text-light w-full py-3 rounded-lg font-bold mb-5"
-                                />
-                                <div className='flex gap-x-2  w-full py-2.5 rounded-lg border-2 justify-center mb-5'>
-                                    <FcGoogle size={20} />
-                                    <ApText className='font-bold'>Sign in with Google</ApText>
-
-                                </div>
-
-                                <div className='flex gap-x-1 justify-center md:justify-end lg:justify-end'>
-                                    <ApText>Already have an account? </ApText>
-                                    <li> <Link href="" className='border-b-2 border-black'>Login</Link></li>
-                                </div>
-
-                                <div className='flex justify-between mt-[5rem]'>
-                                    <ApText className='font-bold'>Need Help?</ApText>
-                                    <div className='flex gap-x-2'>
-                                        <BsTwitter size={25} />
-                                        <AiOutlineInstagram size={25} />
-                                        < AiFillLinkedin size={25} />
+                                        />
                                     </div>
+
+
+                                    <div className='pb-8'>
+                                        <ApTextInput
+                                            type="password"
+                                            placeHolder="Password"
+                                            name="password"
+                                            className=' border-b-2 border-[#6F6E6E] 
+                                     placeholder:text-[1rem] placeholder:text-[#6F6E6E]'
+                                        />
+                                    </div>
+
+
+
+                                    <ApButton
+                                        title={loading ? "Loading..." : "Create an account"}
+                                        type="submit"
+                                        className="bg-[#056DFF] text-white text-light w-full py-3 rounded-lg font-bold mb-5"
+                                    />
+                                    <div className='flex gap-x-2  w-full py-2.5 rounded-lg border-2 justify-center mb-5'>
+                                        <FcGoogle size={20} />
+                                        <ApText className='font-bold'>Sign in with Google</ApText>
+
+                                    </div>
+
+                                    <div className='flex gap-x-1 justify-center md:justify-end lg:justify-end'>
+                                        <ApText>Already have an account? </ApText>
+                                        <li> <Link href="" className='border-b-2 border-black'>Login</Link></li>
+                                    </div>
+
+                                    <div className='flex justify-between mt-[5rem]'>
+                                        <ApText className='font-bold'>Need Help?</ApText>
+                                        <div className='flex gap-x-2'>
+                                            <BsTwitter size={25} />
+                                            <AiOutlineInstagram size={25} />
+                                            < AiFillLinkedin size={25} />
+                                        </div>
+                                    </div>
+
+
                                 </div>
-
-
-                            </div>
-
+                            </Form>
                         )}
                     </Formik>
                 </div>

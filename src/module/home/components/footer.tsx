@@ -2,10 +2,11 @@ import { ApImage } from '@/components/image'
 import React from 'react'
 import LogoWhite from "../../../../public/image/LogoWhite.png"
 import { ApText } from '@/components/typography'
-import BsInstagram from "react-icons/bs"
+import BsInstagram, { BsTwitter } from "react-icons/bs"
 import CiTwitter from "react-icons/ci"
 import PiLinkedinLogo from "react-icons/pi"
 import Link from 'next/link'
+import { AiOutlineInstagram, AiFillLinkedin } from 'react-icons/ai'
 
 export const FooterComponent = () => {
     return (
@@ -27,21 +28,23 @@ export const FooterComponent = () => {
                         />
                     </div>
 
-                    <ApText size={'sm'} className=' text-center w-[80%] mx-auto text-white md:text-left md:w-[20rem] md:mx-0
-                     lg:text-left lg:w-[20rem] lg:mx-0'>
+                    <ApText size={'sm'} className=' text-center hidden text-white md:text-left md:w-[20rem] md:mx-0 md:block
+                     lg:text-left lg:w-[20rem] lg:mx-0 lg:block'>
                         Find, Join, Save, Manage, Share, Stay Updated. Sign up now to discover your ideal student accommodation, unlock exclusive features, effortlessly save and compare favorite hostels,
                     </ApText>
 
-                    <div>
-                        {/* <BsInstagram/>
-                    <CiTwitter/>
-                    <PiLinkedinLogo/> */}
+                    <div className="flex justify-center md:flex md:justify-start lg:flex lg:justify-start">
+                        <div className='flex gap-x-3 mt-5'>
+                            <BsTwitter size={25} color="white" />
+                            <AiOutlineInstagram size={25} color="white" />
+                            < AiFillLinkedin size={25} color="white" />
+                        </div>
                     </div>
                 </div>
 
                 <div>
-                    <ApText className="text-center text-white font-bold text-md my-8 md:text-left lg:text-left">Helpfull Links</ApText>
-                    <div className='flex-1 text-center md:text-left lg:text-left'>
+                    <ApText className="text-center hidden text-white font-bold text-md my-8 md:text-left md:block lg:block  lg:text-left">Helpfull Links</ApText>
+                    <div className=' flex py-4 justify-center gap-x-4 text-center md:py-0 md:block md:text-left lg:py-0 lg:text-left lg:block'>
                         <li>
                             <Link href="/" className='text-white'>Home</Link>
 
@@ -59,24 +62,30 @@ export const FooterComponent = () => {
 
                 </div>
                 <div>
-                    <ApText className="text-center text-white font-bold text-md my-8 md:text-left lg:text-left">Support</ApText>
+                    <ApText className="text-center hidden text-white font-bold text-md my-8 md:text-left md:block lg:block lg:text-left">Support</ApText>
 
-                    <div className='flex-1 text-center md:text-left lg:text-left'>
+                    {/* <div className="w-[100%] mx-auto md:w-[100%] md:mx-0 lg:w-[100%] lg:mx-0"> */}
+
+                    <div className='flex justify-center text-center md:text-left md:block lg:text-left lg:block'>
+                        <li >
+                            <Link href="/" className='text-white px-[1rem] md:px-0 lg:px-0'>
+                                Term and Condition
+                            </Link>
+
+                        </li>
                         <li>
-                            <Link href="/" className='text-white'>Term and Condition</Link>
+                            <Link href="/" className='text-white px-[1rem] md:px-0 lg:px-0'>Support center</Link>
 
                         </li>
                         <li>
-                            <Link href="/" className='text-white'>Support center</Link>
+                            <Link href="/" className='text-white px-[1rem] md:px-0 lg:px-0'>privacy policy</Link>
 
                         </li>
-                        <li>
-                            <Link href="/" className='text-white'>privacy policy</Link>
-
-                        </li>
+                        {/* </div> */}
                     </div>
+
                 </div>
-                <div>
+                <div className="hidden md:block lg:block">
                     <ApText className="text-center text-white font-bold text-md  my-8 md:text-left lg:text-left">Contact</ApText>
                     <ApText className=" text-center w-[80%] mx-auto text-white md:text-left md:w-[20rem] md:mx-0
                      lg:text-left lg:w-[20rem] lg:mx-0" size={"sm"}>
@@ -86,7 +95,9 @@ export const FooterComponent = () => {
                     </ApText>
 
                 </div>
+
             </div>
+
             <div className='border-t-2 my-2'>
                 <ApText className="text-white text-center py-4">© Copyright{new Date().getFullYear()}. All Right Reserved!.</ApText>
 

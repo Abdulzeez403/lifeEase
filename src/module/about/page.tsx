@@ -7,10 +7,11 @@ import HostelsComponents from '../home/components/hostels'
 import Testimonial from '../home/components/testimonial'
 import { FooterComponent } from '../home/components/footer'
 import ChooseComponent from '../home/components/choose'
+import { Container } from '@/components/container/container'
 
 export const Aboutpage = () => {
     return (
-        <div>
+        <Container>
 
             <div>
                 <div className='flex justify-end rounded-lg py-4 mb-10 '>
@@ -60,7 +61,7 @@ export const Aboutpage = () => {
 
             </div>
 
-        </div>
+        </Container>
 
 
     )
