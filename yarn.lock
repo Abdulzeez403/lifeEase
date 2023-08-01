@@ -3091,6 +3091,11 @@ tapable@^2.2.0:
   resolved "https://registry.npmjs.org/tapable/-/tapable-2.2.1.tgz"
   integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
+text-encryption@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/text-encryption/-/text-encryption-1.5.1.tgz#7ff9bbbd7ba9f7f1d4838f4c9cdeb95d4bc73b90"
+  integrity sha512-CqVehNQk5JblA8pHj+gG7l7u+4M4P2MG6eigUrx/yxVB+XtRbHfcDmP0+l3sdGIzBrzbNlRvOy5UM/5X7pJE/A==
+
 text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
