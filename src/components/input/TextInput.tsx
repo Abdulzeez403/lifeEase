@@ -33,7 +33,7 @@ export const ApTextInput: React.FC<IProps> = ({
 
   return (
     <div
-      style={{ marginBottom: 10, display: "", flexDirection: "column" }}
+      style={{ marginBottom: 10, flexDirection: "column" }}
       className={containerClassName}
     >
       {label && <p className="text-[13px] text-dark mb-3">{label}</p>}
