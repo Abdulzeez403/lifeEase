@@ -47,12 +47,12 @@ export const UserContextProvder: React.FC<IProps> = ({ children }) => {
   };
 
 
-  const CreateUser = (values: IAuthSignUp) => {
+  const CreateUser = async (values: IAuthSignUp) => {
     setLoading(true);
 
     try {
-      axios
-        .post("https://life-ease.onrender.com/", values)
+      await axios
+        .post("https://life-ease.onrender.com/auth/signup", values)
         .then(() => {
           toast.success("Post Successfully");
         }).then(() => {
@@ -69,7 +69,7 @@ export const UserContextProvder: React.FC<IProps> = ({ children }) => {
   const LogInUser = async (values: IAuthSignIn) => {
     setLoading(true);
     try {
-      const res = await fetch("https://life-ease.onrender.com/", {
+      const res = await fetch("https://life-ease.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
