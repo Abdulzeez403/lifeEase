@@ -1,17 +1,13 @@
 import { ApImage } from '@/components/image'
-import React from 'react'
-import Logo from "../../../../public/image/Logo.png"
 import { ApSearchInput } from '@/components/input/Search'
-import Profile from "../../../../public/image/testimonial.png"
-import { BiSolidStar } from 'react-icons/bi'
-import { BsSearch } from "react-icons/bs";
-import { FiShare } from "react-icons/fi"
-import { AiOutlineHeart } from 'react-icons/ai'
+import React from 'react'
+import { BsSearch } from 'react-icons/bs'
+import Logo from "../../../../../public/image/Logo.png"
+import Profile from "../../../../../public/image/testimonial.png"
 
-export const BookingHeader = () => {
+const AdminHeader = () => {
     return (
         <div>
-
             <div className='flex justify-between items-center my-4'>
                 <div className='w-[100px] '>
                     <ApImage
@@ -48,36 +44,8 @@ export const BookingHeader = () => {
             </div>
 
 
-
-            <div className="flex justify-between items-center">
-                <div>
-                    <h4 className="font-bold text-[2rem] pb-2">Airclass Hostel</h4>
-                    <div className="flex gap-x-4" >
-                        <div className="flex gap-x-2">
-                            <BiSolidStar size={15} color="#FFBB0D" />
-                            <h4>4.5</h4>
-                        </div>
-                        <h5 className='text-sm'>Oke-Odo, Tanke, Ilorin.</h5>
-                    </div>
-                </div>
-
-                <div className='text-center'>
-                    <h4 className="font-bold text-[1.5rem] pb-2">200k/year</h4>
-                    <div className='flex gap-x-4'>
-
-                        <div className="flex gap-x-2 items-center">
-                            <AiOutlineHeart size={17} />
-                            <h4>Save</h4>
-                        </div>
-                        <div className="flex gap-x-2 items-center">
-                            <FiShare size={17} />
-                            <h4>Share</h4>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
-
     )
 }
+
+export default AdminHeader;
