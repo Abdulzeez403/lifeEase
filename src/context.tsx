@@ -3,20 +3,29 @@ import { AuthContextProvder } from "./module/auth/context";
 import { ProfileContextProvider } from "./module/profile/context";
 
 export const combineContext = (...components: FC[]): FC<any> => {
-  return components.reduce(
+  const CombinedComponent = components.reduce(
     (AccumulatedComponents: any, CurrentComponent: any) => {
-      return ({ children }: ComponentProps<FC<any>>): JSX.Element => {
+      const WrapperComponent: FC<any> = ({
+        children,
+      }: ComponentProps<FC<any>>): JSX.Element => {
         return (
           <AccumulatedComponents>
             <CurrentComponent>{children}</CurrentComponent>
           </AccumulatedComponents>
         );
       };
-    },
-    ({ children }) => <>{children}</>
-  );
-};
 
+      // Assign a displayName to the WrapperComponent
+      WrapperComponent.displayName = `Combined(${CurrentComponent.displayName || CurrentComponent.name || "Unknown"
+        })`;
+
+      return WrapperComponent;
+    },
+    ({ children }: any) => <>{children}</>
+  );
+
+  return CombinedComponent;
+};
 const providers = [AuthContextProvder, ProfileContextProvider] as any;
 
 export const AppContextProvider = combineContext(...providers);
