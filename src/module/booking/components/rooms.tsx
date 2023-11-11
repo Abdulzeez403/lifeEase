@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { ApImage } from '@/components/image';
-import Image1 from "../../../../public/image/image1.png"
+// import Image1 from "../../../../public/image/image1.png"
 import Image2 from "../../../../public/image/image2.png"
 import Image3 from "../../../../public/image/image3.png"
 import Image4 from "../../../../public/image/image4.png"
@@ -11,7 +11,7 @@ const RoomsImage = () => {
         <div className='flex gap-x-3 py-5'>
             <div className='w-[43rem] gap-x-2'>
                 <ApImage
-                    src={Image1}
+                    src={Image2}
                     width={30}
                     height={30}
                     alt=""
