@@ -1,5 +1,6 @@
 import ApButton from '@/components/button'
 import { ApTextInput } from '@/components/input/TextInput'
+import AppInputNumber from '@/components/input/inputnumber'
 import { Switch } from 'antd'
 import { Form, Formik, FormikProps } from 'formik'
 import React from 'react'
@@ -86,18 +87,21 @@ export const FormComponents = () => {
                                             <h4>Numbers of room</h4>
                                         </div>
                                         <div className=" ">
-                                            <ApTextInput
+                                            {/* <ApTextInput
                                                 name="roomNumber"
                                                 className="bg-white border-2 border-blue-200 placeholder:text-center w-[2.9rem] h-[1rem] "
                                                 placeHolder='12'
 
-                                            />
+
+                                            /> */}
+
+                                            <AppInputNumber />
                                         </div>
                                     </div>
 
                                 </div>
 
-                                <div className=' mt-5 w-20 auto'>
+                                <div className=' mt-5 w-30 auto'>
                                     <ApButton title="Save Change" color="primary" btnSize="md" rounded="rounded-md" />
 
                                 </div>

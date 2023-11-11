@@ -5,17 +5,17 @@ import { AgentPage } from './components/agent'
 import { FooterComponent } from '../home/components/footer'
 import HostelsComponents from './components/hostels'
 import { Container } from '@/components/container/container'
-// import MapComponent from './components/map'
+import { MyMapComponent } from './components/maps'
+
 
 
 export const BookingPage = () => {
-    // const position: [number, number] = [51.505, -0.09];
     return (
         <Container>
             <BookingHeader />
             <RoomsImage />
             <AgentPage />
-            {/* <MapComponent position={position} /> */}
+            <MyMapComponent />
             <HostelsComponents />
             <div className="bg-black mt-20">
                 <FooterComponent />
