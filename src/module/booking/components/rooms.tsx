@@ -33,7 +33,7 @@ const RoomsImage = () => {
                         src={Image3}
                         width={30}
                         height={30}
-                        alt=""
+                        alt="image"
                         className="w-full h-full object-cover"
                     />
                 </div>
