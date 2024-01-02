@@ -33,7 +33,7 @@ const AdminNav: React.FC<IProps> = ({ type }) => {
             </li>
             <li className={`flex gap-x-4 items-center py-4 px-2 ${types == "Notifications" && "bg-blue-300"}`} onClick={() => setTypes("Notifications")}>
                 <MdNotifications size={25} />
-                <Link href="#" className="font-bold ">Notifications</Link>
+                <Link href="/admin/message" className="font-bold ">Notifications</Link>
             </li>
             <li className={`flex gap-x-4 items-center py-4 px-2 ${types == "Settings" && "bg-blue-300"}`} onClick={() => setTypes("Settings")}>
                 <AiFillSetting size={25} />

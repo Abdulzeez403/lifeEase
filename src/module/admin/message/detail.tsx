@@ -5,13 +5,40 @@ import { BsSearch } from 'react-icons/bs'
 import { Space } from 'antd'
 import UserImage from "../../../../public/image/testimonial.png"
 import { ApImage } from '@/components/image'
-import { ChatMessage } from './components/chat'
+import ChatMessage from './components/chat'
 
 
 export const MessageDetail = () => {
     const handleSearch = () => {
         console.log("Yea")
     }
+
+    const DateNow = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })
+
+    const data = [
+        {
+            name: "Sodiq Abdulazeez",
+            message: "Were are you at?",
+            time: DateNow
+        },
+        {
+            name: "John Doe",
+            message: "Hi?",
+            time: DateNow
+        }
+        ,
+        {
+            name: "James Rema",
+            message: "Fun!",
+            time: DateNow
+        },
+        {
+            name: "Uthman Abdulganyi",
+            message: "We are getting there!",
+            time: DateNow
+        }
+
+    ]
     return (
         <div className=" flex ">
             <div className='w-[22rem] h-96 '>
@@ -29,7 +56,13 @@ export const MessageDetail = () => {
 
                     </div>
                     <div className='bg-white px-4'>
-                        <ApMessageItems />
+                        {data?.map((chat: any, index: number) => (
+                            <div key={index}>
+                                <ApMessageItems uerName={chat?.name} message={chat?.message} time={chat?.time} />
+
+                            </div>
+
+                        ))}
 
                     </div>
                 </div>

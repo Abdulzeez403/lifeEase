@@ -3,7 +3,13 @@ import { Badge, Space } from 'antd'
 import React from 'react'
 import UserImage from "../../../../../public/image/testimonial.png"
 
-export const ApMessageItems = () => {
+interface IProps {
+    uerName: string;
+    message: string,
+    time: any
+}
+
+export const ApMessageItems = ({ uerName, message, time }: IProps) => {
 
     return (
         <Space className='flex justify-between items-center py-3' >
@@ -20,14 +26,14 @@ export const ApMessageItems = () => {
                 </div>
 
                 <Space direction='vertical' className='leading-2'>
-                    <h3 className="text-sm font-semibold">John Doe</h3>
-                    <p className="text-xs">Were getting there!</p>
+                    <h3 className="text-sm font-semibold">{uerName}</h3>
+                    <p className="text-xs">{message}</p>
 
                 </Space>
             </Space>
 
             <Space direction="vertical">
-                <div><h4 className="text-xs">12:20pm</h4></div>
+                <div><h4 className="text-xs">{time}</h4></div>
                 <Badge
                     size="default"
                     className=""

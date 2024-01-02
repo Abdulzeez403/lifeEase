@@ -1,44 +1,45 @@
-import { ApImage } from '@/components/image'
-import React from 'react'
-import UserImage from "../../../../../public/image/testimonial.png"
-import { Space } from 'antd'
+import { Space } from 'antd';
+import Image from 'next/image';
 
-
-export const ChatMessage = () => {
-    return (
-        <Space className='w-[30rem] m-4'>
-            <Space>
-                <div className=" flex-end">
-                    <ApImage
-                        src={UserImage}
-                        width={40}
-                        height={40}
-                        alt=""
-                        className="rounded-full justify-end "
-                    />
-                </div>
-
-                <div>
-                    <p className='border-2 rounded-md bg-blue-600 text-xs p-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim, magni reprehenderit ad animi quam! Temporibus accusamus quod aut enim!</p>
-                </div>
-            </Space>
-
-            <Space direction='horizontal' className=" justify-end mt-[10rem]">
-                <div >
-                    <ApImage
-                        src={UserImage}
-                        width={40}
-                        height={40}
-                        alt=""
-                        className="rounded-full justify-end "
-                    />
-                </div>
-
-                <div>
-                    <p className='border-2 rounded-md bg-blue-600 text-xs p-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim, magni reprehenderit ad animi quam! Temporibus accusamus quod aut enim!</p>
-                </div>
-            </Space>
-
-        </Space>
-    )
+interface Message {
+    user: string;
+    text: string;
+    type?: string; // Added type for the recipient
 }
+
+interface MessageBubbleProps extends Message { }
+
+const MessageBubble: React.FC<MessageBubbleProps> = ({ type, user, text }) => (
+    <div className={`message-bubble ${type === 'Recipient' ? 'recipient' : ''}`}>
+        <div className='user-image'>
+            <Image src='/image/testimonial.png' width={30} height={30} alt={`Profile of ${user}`} className='rounded-full w-12 h-12' />
+        </div>
+        <div className='message-content'>
+            <p className='message-text'>{text}</p>
+        </div>
+    </div>
+);
+
+const ChatMessage: React.FC = () => {
+    const messages: Message[] = [
+        {
+            user: 'Sodiq',
+            text: 'This is the User message!',
+        },
+        {
+            user: 'Sodiq',
+            text: 'This is the User message 2!',
+            type: 'Recipient',
+        },
+    ];
+
+    return (
+        <Space className='chat-container'>
+            {messages?.map((msg, index) => (
+                <MessageBubble key={index} {...msg} />
+            ))}
+        </Space>
+    );
+};
+
+export default ChatMessage;

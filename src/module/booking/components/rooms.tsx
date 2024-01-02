@@ -10,7 +10,7 @@ const RoomsImage = () => {
         <div className='flex gap-x-3 py-5'>
             <div className='w-[43rem] gap-x-2'>
                 <ApImage
-                    src="../../../../public/image/image1.png"
+                    src="/../../../../public/image/image1.png"
                     width={30}
                     height={30}
                     alt="Image"
@@ -23,7 +23,7 @@ const RoomsImage = () => {
                         src={Image4}
                         width={30}
                         height={30}
-                        alt=""
+                        alt="image"
                         className="w-full h-full object-cover"
                     />
                 </div>
